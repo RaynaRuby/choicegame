@@ -1,0 +1,16 @@
+#input sight
+yes_no = input('Does the guard see the player (y/n): ')
+
+#ouput
+if yes_no.lower() == 'n':
+    print('The guard waits.')
+elif yes_no.lower() == 'y':
+    distance = float(input('How far away is the player? '))
+    if distance <= 1:
+        print('The guard attacks!')
+    elif distance <= 4:
+        print('The guard advances.')
+    else:
+        print('The guard waits.')
+else:
+    print('Error. Input only y or n')
